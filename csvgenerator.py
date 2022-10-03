@@ -17,6 +17,6 @@ with open('313project.csv', mode='w') as file:
     date += d.timedelta(days=1)
     file_writer.writerow([
       date,
-      round(r.uniform(500.00, 2000.00), 2),
+      round(r.uniform(500.00, 2100.00), 2),
       r.randrange(10, 400)
     ])
