@@ -36,9 +36,10 @@ public class saleshistory {
      }
 
      System.out.println("Opened database successfully");
-     String csvFilePath = "/Users/dongyingchen/Pictures/Book2.csv";
+     String csvFilePath = "/Users/dongyingchen/Downloads/315_populate_db-main/PandaExpressPOS/saleshistory.csv";
      try{
        //create a statement object
+
        //Running a query
        //TODO: update the sql command here
        String sqlStatement = "INSERT INTO saleshistory (date,netsales,numorders) VALUES(?,?,?)";
@@ -48,7 +49,7 @@ public class saleshistory {
             lineReader.readLine(); // skip header line in csv
             while ((lineText = lineReader.readLine()) != null) {
                 String[] data = lineText.split(",");
-                SimpleDateFormat df1 = new SimpleDateFormat("yyyy-mm-dd");
+                SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd");
                 Date date1 = df1.parse(data[0]);
                 Double sales =  Double.parseDouble(data[1]);
                 int orders = Integer.parseInt(data[2]);

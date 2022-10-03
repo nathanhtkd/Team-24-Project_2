@@ -11,12 +11,12 @@ with open('315project2.csv', mode='w') as file:
                            quoting=csv.QUOTE_MINIMAL)
 
   file_writer.writerow(['YYYY-MM-DD', 'net sales-currency', 'num orders-int'])
-  date = d.date(2020, 2, 20)
+  date = d.date(2022, 9, 3)
   
   for i in range(number_of_records):
     date += d.timedelta(days=1)
     file_writer.writerow([
       date,
-      round(r.uniform(500.00, 2100.00), 2),
-      r.randrange(10, 400)
+      round(r.uniform(1000.00, 4000.00), 2),
+      r.randrange(50, 500)
     ])

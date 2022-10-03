@@ -36,7 +36,7 @@ public class inventory {
      }
 
      System.out.println("Opened database successfully");
-     String csvFilePath = "/Users/dongyingchen/Pictures/Book2.csv";
+     String csvFilePath = "/Users/dongyingchen/Downloads/PandaExpressPOS-main/inventory.csv";
      try{
        //create a statement object
        //Running a query
