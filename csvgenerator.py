@@ -12,7 +12,7 @@ with open('313project.csv', mode='w') as file:
                            quotechar='"',
                            quoting=csv.QUOTE_MINIMAL)
 
-  file_writer.writerow(['YYYY-MM-DD', 'net sales-currency', 'num orders-int'])
+  file_writer.writerow(['YYYY-MM-DD', 'Net Sales', 'Orders'])
 
   for i in range(number_of_records):
     file_writer.writerow([
