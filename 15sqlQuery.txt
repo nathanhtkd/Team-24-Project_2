@@ -1,5 +1,9 @@
-SELECT* FROM sales_history
-SELECT* FROM inventory 
+SELECT* FROM sales_history;
+SELECT* FROM inventory;
 SELECT item FROM inventory;
 SELECT date FROM saleshistory;
-SELECT SUM(netsales) FROM saleshistory;
+SELECT AVG(netsales) FROM saleshistory;
+SELECT COUNT(item) FROM inventory;
+SELECT * FROM inventory WHERE category='entree' AND quantity=100 LIMIT 5;
+SELECT * FROM saleshistory WHERE date >= '2022-01-13';
+SELECT netsales, numorders FROM saleshistory WHERE numorders BETWEEN '300' AND '500';
