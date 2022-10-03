@@ -1,0 +1,3 @@
+SELECT* FROM sales_history
+SELECT* FROM inventory 
+SELECT item FROM inventory;
