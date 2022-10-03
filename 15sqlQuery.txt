@@ -1,0 +1,5 @@
+SELECT* FROM sales_history
+SELECT* FROM inventory 
+SELECT item FROM inventory;
+SELECT date FROM saleshistory;
+SELECT SUM(netsales) FROM saleshistory;
