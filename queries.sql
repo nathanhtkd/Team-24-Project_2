@@ -42,3 +42,6 @@ SELECT MAX(quantity) FROM inventory;
 
 \echo SELECT * FROM saleshistory LIMIT 2
 SELECT * FROM saleshistory LIMIT 2;
+
+\echo SELECT * FROM saleshistory WHERE netsales > 4000
+SELECT * FROM saleshistory WHERE netsales > 4000;
