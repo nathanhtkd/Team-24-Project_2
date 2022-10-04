@@ -13,3 +13,4 @@ SELECT item FROM inventory WHERE item like '%sauce%';
 SELECT id FROM inventory;
 SELECT MAX(quantity) FROM inventory;
 SELECT * FROM saleshistory LIMIT 2;
+SELECT * FROM saleshistory WHERE netsales > 4000;
