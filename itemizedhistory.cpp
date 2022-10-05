@@ -22,7 +22,7 @@ int main() {
     }
     file << "date" <<  "," << "item" << ","<< "price" << "\n"; 
 
-    file << "2022-09-04" <<  "," << "orangechicken" << ","<< "7.93" << "\n"; 
+
 
     
     string entree[] = {"honeysesamechicken", "orangechicken",         
@@ -95,7 +95,7 @@ for(int i = 0; i <= 21; i++){
             total_price += 2.70;
         }else if(cidx == 4){
             //entree
-             file << sides[eidx] <<
+             file << sides[sidx] <<
                 "," << "6.70" << "\n";
             total_price += 6.70;
         }
