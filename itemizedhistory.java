@@ -6,7 +6,7 @@ import java.util.Date;
 CSCE 315
 9-27-2021 Lab
  */
-public class saleshistory {
+public class itemizedhistory {
 
   //Commands to run this script
   //This will compile all java files in this directory
@@ -36,7 +36,7 @@ public class saleshistory {
      }
 
      System.out.println("Opened database successfully");
-     String csvFilePath = "/Users/dongyingchen/Downloads/315_populate_db-main/PandaExpressPOS/itemizedhistory.csv";
+     String csvFilePath = "/home/a3pmfatima/Team-24-Project_2/itemizedhistory.csv";
      try{
        //create a statement object
 
