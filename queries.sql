@@ -18,6 +18,14 @@ SELECT date FROM itemizedhistory WHERE item='plate:kungpaochicken beijingbeef br
 \echo SELECT AVG(netsales) FROM saleshistory
 SELECT AVG(netsales) FROM saleshistory;
 
+-- Can I see all of the customer orders?
+\echo SELECT* FROM itemizedhistory;
+SELECT* FROM itemizedhistory;
+
+-- Can I see the what kind of configurations there are when customers order a plate?
+\echo SELECT MIN(price) FROM itemizedhistory
+SELECT item FROM itemizedhistory WHERE price='8.2';
+
 -- How many items are we selling in our menu?
 \echo SELECT COUNT(item) FROM inventory
 SELECT COUNT(item) FROM inventory;
@@ -26,9 +34,9 @@ SELECT COUNT(item) FROM inventory;
 \echo SELECT * FROM inventory WHERE category='entree' AND quantity=100 LIMIT 5
 SELECT * FROM inventory WHERE category='entree' AND quantity=100 LIMIT 5;
 
--- What is the sale history past Janurary 13, 2022?
-\echo SELECT * FROM saleshistory WHERE date >= '2022-01-13'
-SELECT * FROM saleshistory WHERE date >= '2022-01-13';
+-- What were the orders placed by customers past September 20, 2022?
+\echo SELECT * FROM itemizedhistory WHERE date >= '2022-09-20';
+SELECT * FROM itemizedhistory WHERE date >= '2022-09-20';
 
 -- What are the netsales for the days where the number of orders was between 300 and 500?
 \echo SELECT netsales, numorders FROM saleshistory WHERE numorders BETWEEN '300' AND '500'
@@ -38,9 +46,9 @@ SELECT netsales, numorders FROM saleshistory WHERE numorders BETWEEN '300' AND '
 \echo SELECT MAX(numorders) FROM saleshistory
 SELECT MAX(numorders) FROM saleshistory;
 
--- What is the sum of netsales from all dates?
-\echo SELECT SUM(netsales) FROM saleshistory
-SELECT SUM(netsales) FROM saleshistory;
+-- What is the sum of orders placed on September 20, 2022
+\echo SELECT SUM(price) FROM itemizedhistory WHERE date='2022-09-20'
+SELECT SUM(price) FROM itemizedhistory WHERE date='2022-09-20';
 
 -- What sauces do we provide in our Panda Express Restaurant
 \echo SELECT item FROM inventory WHERE item like '%sauce%'
@@ -57,6 +65,10 @@ SELECT MAX(quantity) FROM inventory;
 -- What sides do we provide in our Panda Express Restaurant?
 \echo SELECT quantity FROM inventory WHERE entree='sides' 
 SELECT item FROM inventory WHERE category='sides';
+
+-- What are the first two orders listed on our customer orders?
+\echo SELECT * FROM itemizedhistory LIMIT 2
+SELECT * FROM itemizedhistory LIMIT 2;
 
 -- What are the days where we acheived netsales over $4000?
 \echo SELECT * FROM saleshistory WHERE netsales > 4000
