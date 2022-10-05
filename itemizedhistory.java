@@ -56,7 +56,7 @@ public class saleshistory {
         
                 statement.setDate(1, new java.sql.Date(date1.getTime()));
                 statement.setString(2, item);
-                statement.setInt(3, orders);
+                statement.setDouble(3, price);
                 statement.addBatch();
  
             }
