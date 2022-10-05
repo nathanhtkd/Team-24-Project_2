@@ -6,7 +6,7 @@ import java.util.Date;
 CSCE 315
 9-27-2021 Lab
  */
-public class saleshistory {
+public class itemizedhistory {
 
   //Commands to run this script
   //This will compile all java files in this directory
@@ -36,7 +36,7 @@ public class saleshistory {
      }
 
      System.out.println("Opened database successfully");
-     String csvFilePath = "/Users/dongyingchen/Downloads/315_populate_db-main/PandaExpressPOS/itemizedhistory.csv";
+     String csvFilePath = "/home/nathanhtkd/csce315/Project2/PandaExpressPOS/itemizedhistory.csv";
      try{
        //create a statement object
 
@@ -51,8 +51,8 @@ public class saleshistory {
                 String[] data = lineText.split(",");
                 SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd");
                 Date date1 = df1.parse(data[0]);
-                String item =  String.parseString(data[1]);
-                int price= Double.parseDouble(data[2]);
+                String item =  data[1];
+                Double price = Double.parseDouble(data[2]); 
         
                 statement.setDate(1, new java.sql.Date(date1.getTime()));
                 statement.setString(2, item);
@@ -64,7 +64,7 @@ public class saleshistory {
             lineReader.close();
  
             int[] result = statement.executeBatch();
-            conn.commit();
+            // conn.commit();
  
        //send statement to DBMS
        //This executeQuery command is useful for data retrieval
