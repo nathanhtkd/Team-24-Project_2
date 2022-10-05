@@ -37,8 +37,6 @@ public class itemizedhistory {
 
      System.out.println("Opened database successfully");
      String csvFilePath = "/home/a3pmfatima/Team-24-Project_2/itemizedhistory.csv";
-     try{
-       //create a statement object
 
        //Running a query
        //TODO: update the sql command here
@@ -51,8 +49,8 @@ public class itemizedhistory {
                 String[] data = lineText.split(",");
                 SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd");
                 Date date1 = df1.parse(data[0]);
-                String item =  String.parseString(data[1]);
-                int price= Double.parseDouble(data[2]);
+                String item =  data[1];
+                Double price = Double.parseDouble(data[2]); 
         
                 statement.setDate(1, new java.sql.Date(date1.getTime()));
                 statement.setString(2, item);
@@ -64,7 +62,7 @@ public class itemizedhistory {
             lineReader.close();
  
             int[] result = statement.executeBatch();
-            conn.commit();
+            // conn.commit();
  
        //send statement to DBMS
        //This executeQuery command is useful for data retrieval
