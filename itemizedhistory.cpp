@@ -15,7 +15,7 @@ using namespace std;
 int main() {
 
     std::ofstream file;
-    file.open("saleshistory.csv");
+    file.open("itemizedhistory.csv");
 
     if (!file.is_open()) {
        cout << "file not open";
