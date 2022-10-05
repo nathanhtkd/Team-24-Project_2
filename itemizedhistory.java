@@ -36,7 +36,11 @@ public class itemizedhistory {
      }
 
      System.out.println("Opened database successfully");
+<<<<<<< HEAD
      String csvFilePath = "/home/nathanhtkd/csce315/Project2/PandaExpressPOS/itemizedhistory.csv";
+=======
+     String csvFilePath = "/home/a3pmfatima/Team-24-Project_2/itemizedhistory.csv";
+>>>>>>> 9775d9a90769d685999ba61a8570c84186fe1ed6
      try{
        //create a statement object
 
