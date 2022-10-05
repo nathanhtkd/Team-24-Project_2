@@ -19,7 +19,7 @@ SELECT date FROM itemizedhistory WHERE item='plate:kungpaochicken beijingbeef br
 SELECT AVG(netsales) FROM saleshistory;
 
 -- Can I see all of the customer orders?
-\echo SELECT* FROM itemizedhistory;
+\echo SELECT* FROM itemizedhistory
 SELECT* FROM itemizedhistory;
 
 -- Can I see the what kind of configurations there are when customers order a plate?
@@ -35,7 +35,7 @@ SELECT COUNT(item) FROM inventory;
 SELECT * FROM inventory WHERE category='entree' AND quantity=100 LIMIT 5;
 
 -- What were the orders placed by customers past September 20, 2022?
-\echo SELECT * FROM itemizedhistory WHERE date >= '2022-09-20';
+\echo SELECT * FROM itemizedhistory WHERE date >= '2022-09-20'
 SELECT * FROM itemizedhistory WHERE date >= '2022-09-20';
 
 -- What are the netsales for the days where the number of orders was between 300 and 500?
@@ -55,7 +55,7 @@ SELECT SUM(price) FROM itemizedhistory WHERE date='2022-09-20';
 SELECT item FROM inventory WHERE item like '%sauce%';
 
 -- Can I see all the orders placed on September 4, 2022?
-\echo SELECT * FROM itemizedhistory WHERE date='2022-09-04'; 
+\echo SELECT * FROM itemizedhistory WHERE date='2022-09-04'
 SELECT item,price FROM itemizedhistory WHERE date='2022-09-04'; 
 
 -- What item do we have the most of?
